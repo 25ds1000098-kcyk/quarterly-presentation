@@ -1,149 +1,127 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Quarterly Earnings — RevealJS</title>
+  <meta charset="utf-8">
+  <title>Quarterly Earnings Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Reveal core CSS (CDN) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reset.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.css" />
-  <!-- theme -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/theme/white.min.css" id="theme" />
+  <!-- Reveal core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
 
-  <!-- optional highlight theme -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" />
-
-  <style>
-    /* small custom styles */
-    .chart { height: 360px; margin: 20px auto; }
-    .email { font-size: 0.9rem; opacity: 0.85; }
-  </style>
+  <!-- Code highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
 </head>
+
 <body>
-  <div class="reveal">
-    <div class="slides">
+<div class="reveal">
+<div class="slides">
 
-      <!-- Slide 1: Title -->
-      <section>
-        <h1>Quarterly Earnings Report</h1>
-        <p>
-          Email:
-          <strong>25ds1000098@ds.study.iitm.ac.in</strong>
-        </p>
-        <aside class="notes">
-          Opening slide – introduce yourself.
-        </aside>
-      </section>
+  <!-- ✅ Title Slide (EMAIL AS PLAIN TEXT) -->
+  <section>
+    <h1>Quarterly Earnings Report</h1>
 
-      <!-- Slide 2: Markdown (example) -->
-      <section data-markdown>
-        <textarea data-template>
-## Highlights (Markdown slide)
+    <p>
+      Email:
+      <strong>25ds1000098@ds.study.iitm.ac.in</strong>
+    </p>
 
-- Revenue up **12%** QoQ
-- Profit margin improved by **1.8%**
-- Key drivers:
-  - Pricing adjustments
-  - Cost optimization
+    <p>Role: Technical Consultant</p>
 
---- 
+    <aside class="notes">
+      Introduce the report and outline the agenda.
+    </aside>
+  </section>
 
-### Next: deep dive into revenue sources
-        </textarea>
-      </section>
+  <!-- ✅ MARKDOWN SLIDE -->
+  <section data-markdown>
+    <textarea data-template>
+## Highlights (Markdown Slide)
 
-      <!-- Slide 3: Fragments (animated list) -->
-      <section>
-        <h2>Key Takeaways</h2>
-        <ul>
-          <li class="fragment">Revenue growth: +12% (QoQ)</li>
-          <li class="fragment">Operating cost savings implemented</li>
-          <li class="fragment fade-up">Investments deferred to next quarter</li>
-        </ul>
-        <aside class="notes">
-          Reveal items one at a time using the fragments. Pause after each to narrate.
-        </aside>
-      </section>
+- Revenue growth **+12%**
+- Profit margin improved
+- Cost optimization initiatives
 
-      <!-- Slide 4: Code with syntax highlighting -->
-      <section>
-        <h2>Example: Data extraction (Python)</h2>
-        <pre><code class="language-python">
+---
+
+### Moving into details next
+    </textarea>
+  </section>
+
+  <!-- ✅ FRAGMENTS -->
+  <section>
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li class="fragment">Strong regional performance</li>
+      <li class="fragment">Controlled operating expenses</li>
+      <li class="fragment fade-up">Stable outlook for next quarter</li>
+    </ul>
+
+    <aside class="notes">
+      Reveal points gradually and explain each.
+    </aside>
+  </section>
+
+  <!-- ✅ CODE WITH SYNTAX HIGHLIGHTING -->
+  <section>
+    <h2>Revenue Processing (Python)</h2>
+    <pre><code class="language-python">
 import pandas as pd
 
-# Load revenue data
-df = pd.read_csv('data/revenue_q4.csv')
+data = pd.read_csv("revenue.csv")
+summary = data.groupby("region")["revenue"].sum()
+print(summary)
+    </code></pre>
 
-# simple aggregation
-agg = df.groupby('region')['revenue'].sum().sort_values(ascending=False)
-print(agg)
-        </code></pre>
-        <aside class="notes">
-          Point out the pipeline: read -> group -> sum -> visualize.
-        </aside>
-      </section>
+    <aside class="notes">
+      Explain how the data is aggregated.
+    </aside>
+  </section>
 
-      <!-- Slide 5: Math / Financial formula -->
-      <section>
-        <h2>Financial Formula</h2>
-        <p>Present value of an annuity:</p>
-        \[
-          PV = PMT \times \frac{1 - (1 + r)^{-n}}{r}
-        \]
-        <aside class="notes">
-          Explain variable meanings and use-case where we discount expected cash flows.
-        </aside>
-      </section>
+  <!-- ✅ MATH FORMULA -->
+  <section>
+    <h2>Financial Formula</h2>
+    <p>Present Value of an Annuity:</p>
+    \[
+      PV = PMT \times \frac{1 - (1 + r)^{-n}}{r}
+    \]
 
-      <!-- Slide 6: Live demo / iframe or placeholder -->
-      <section>
-        <h2>Live Dashboard (demo)</h2>
-        <iframe data-src="https://example.com/your-dashboard" data-preload width="900" height="500"></iframe>
-        <aside class="notes">
-          Use the iframe to show a hosted dashboard. If not available, replace with a static chart.
-        </aside>
-      </section>
+    <aside class="notes">
+      Describe variables and financial meaning.
+    </aside>
+  </section>
 
-      <!-- Final slide -->
-      <section>
-        <h2>Questions?</h2>
-        <p>Contact: <a href="mailto:25ds1000098@ds.study.iitm.ac.in">25ds1000098@ds.study.iitm.ac.in</a></p>
-        <aside class="notes">
-          Thank stakeholders and open for Q&A.
-        </aside>
-      </section>
+  <!-- ✅ FINAL SLIDE -->
+  <section>
+    <h2>Thank You</h2>
+    <p>Questions?</p>
+    <p>
+      Email:
+      <strong>25ds1000098@ds.study.iitm.ac.in</strong>
+    </p>
 
-    </div>
-  </div>
+    <aside class="notes">
+      Open the floor for Q&A.
+    </aside>
+  </section>
 
-  <!-- Reveal + plugins (CDN). Using reveal.js v5+ plugin bundle -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.js"></script>
-  <!-- Plugins -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/markdown/markdown.esm.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/highlight/highlight.esm.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/math/math.esm.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/notes/notes.esm.min.js"></script>
+</div>
+</div>
 
-  <script>
-    // Initialize Reveal
-    Reveal.initialize({
-      width: 1280,
-      height: 720,
-      margin: 0.04,
-      controls: true,
-      progress: true,
-      history: true,
-      transition: 'slide',
-      plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ]
-    });
+<!-- Reveal core -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
 
-    // Lazy-load iframe src when slide is shown (optional)
-    Reveal.on('slidechanged', (event) => {
-      const ifr = event.currentSlide.querySelector('iframe[data-src]');
-      if (ifr && !ifr.src) ifr.src = ifr.getAttribute('data-src');
-    });
-  </script>
+<!-- Plugins -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+
+<script>
+  Reveal.initialize({
+    plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ]
+  });
+</script>
+
 </body>
 </html>
