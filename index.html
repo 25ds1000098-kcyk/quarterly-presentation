@@ -1,127 +1,113 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Quarterly Earnings Report</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <!-- Reveal core CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <title>Q4 2025 Earnings Report - [Your Financial Institution]</title>
 
-  <!-- Code highlighting -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme"> 
+
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
 </head>
-
 <body>
-<div class="reveal">
-<div class="slides">
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h2>Q4 2025 Quarterly Earnings Report</h2>
+                <p>Strategic Vision and Financial Performance</p>
+                <small>Presented by: Technical Consultant</small>
+                <div style="position: absolute; bottom: 50px; left: 0; width: 100%; text-align: center;">
+                    <small>Contact: **25ds1000098@ds.study.iitm.ac.in**</small>
+                </div>
+            </section>
 
-  <!-- ✅ Title Slide (EMAIL AS PLAIN TEXT) -->
-  <section>
-    <h1>Quarterly Earnings Report</h1>
+            <section data-markdown>
+                <textarea data-template>
+                    ## 📊 Performance Overview
 
-    <p>
-      <!-- Email: -->
-      <strong>25ds1000098@ds.study.iitm.ac.in</strong>
-    </p>
+                    A strong quarter driven by digital transformation.
 
-    <p>Role: Technical Consultant</p>
+                    * **Revenue:** Up **12%** Y-o-Y (Year-over-Year).
+                    * **Net Income:** Increased by **5%**.
+                    * **Key Metric:** Customer Acquisition grew by **150,000**.
+                    
+                    ---
+                    
+                    ### Key Takeaway
+                    
+                    We are successfully navigating market volatility.
+                </textarea>
+            </section>
 
-    <aside class="notes">
-      Introduce the report and outline the agenda.
-    </aside>
-  </section>
+            <section>
+                <h3>📈 Growth Drivers (Fragments)</h3>
+                <ul>
+                    <li class="fragment fade-in">Digital Banking Adoption: +30% users.</li>
+                    <li class="fragment fade-in">Cost Efficiency Programs: Savings of $50M.</li>
+                    <li class="fragment highlight-red">Market Risk Exposure: **Carefully managed.**</li>
+                    <li class="fragment highlight-green">New Product Rollouts: 3 successful launches.</li>
+                </ul>
+            </section>
 
-  <!-- ✅ MARKDOWN SLIDE -->
-  <section data-markdown>
-    <textarea data-template>
-## Highlights (Markdown Slide)
+            <section data-transition="slide-in fade-out">
+                <h3>🧮 Financial Model: Capital Asset Pricing Model (CAPM)</h3>
+                <p>We use CAPM to estimate the expected return of an asset, $E(R_i)$.</p>
+                $$E(R_i) = R_f + \beta_i (E(R_m) - R_f)$$
+                
+                <p class="fragment fade-in">Where:</p>
+                <ul class="fragment fade-in">
+                    <li>$R_f$: Risk-free rate (e.g., Treasury bond yield).</li>
+                    <li>$\beta_i$: Beta, a measure of systematic risk.</li>
+                    <li>$E(R_m)$: Expected market return.</li>
+                    <li>$(E(R_m) - R_f)$: Market Risk Premium.</li>
+                </ul>
+            </section>
 
-- Revenue growth **+12%**
-- Profit margin improved
-- Cost optimization initiatives
+            <section>
+                <h3>💻 Code Sample: Risk Assessment Logic</h3>
+                <p>Simplified Python function for calculating credit exposure:</p>
+                <pre><code data-line-numbers="1,4-5">
+def calculate_exposure(loan_amount: float, default_probability: float) -> float:
+    """Calculates Expected Loss (EL)."""
+    # Assuming Loss Given Default (LGD) is 40% (0.4)
+    loss_given_default = 0.4
+    expected_loss = loan_amount * default_probability * loss_given_default
+    return expected_loss
 
----
+# Example usage
+exposure = calculate_exposure(loan_amount=100000, default_probability=0.05)
+                </code></pre>
 
-### Moving into details next
-    </textarea>
-  </section>
+                <aside class="notes">
+                    **Speaker Notes:**
+                    * Highlight that this is a highly simplified model.
+                    * Mention that in production, the LGD calculation is dynamic and asset-specific.
+                    * Focus on the `expected_loss` calculation as the core concept.
+                </aside>
+            </section>
+        </div>
+    </div>
 
-  <!-- ✅ FRAGMENTS -->
-  <section>
-    <h2>Key Takeaways</h2>
-    <ul>
-      <li class="fragment">Strong regional performance</li>
-      <li class="fragment">Controlled operating expenses</li>
-      <li class="fragment fade-up">Stable outlook for next quarter</li>
-    </ul>
-
-    <aside class="notes">
-      Reveal points gradually and explain each.
-    </aside>
-  </section>
-
-  <!-- ✅ CODE WITH SYNTAX HIGHLIGHTING -->
-  <section>
-    <h2>Revenue Processing (Python)</h2>
-    <pre><code class="language-python">
-import pandas as pd
-
-data = pd.read_csv("revenue.csv")
-summary = data.groupby("region")["revenue"].sum()
-print(summary)
-    </code></pre>
-
-    <aside class="notes">
-      Explain how the data is aggregated.
-    </aside>
-  </section>
-
-  <!-- ✅ MATH FORMULA -->
-  <section>
-    <h2>Financial Formula</h2>
-    <p>Present Value of an Annuity:</p>
-    \[
-      PV = PMT \times \frac{1 - (1 + r)^{-n}}{r}
-    \]
-
-    <aside class="notes">
-      Describe variables and financial meaning.
-    </aside>
-  </section>
-
-  <!-- ✅ FINAL SLIDE -->
-  <section>
-    <h2>Thank You</h2>
-    <p>Questions?</p>
-    <p>
-      Email:
-      <strong>25ds1000098@ds.study.iitm.ac.in</strong>
-    </p>
-
-    <aside class="notes">
-      Open the floor for Q&A.
-    </aside>
-  </section>
-
-</div>
-</div>
-
-<!-- Reveal core -->
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
-
-<!-- Plugins -->
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
-
-<script>
-  Reveal.initialize({
-    plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ]
-  });
-</script>
-
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/math/math.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            // Configuration for MathJax
+            math: {
+                mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+                config: 'TeX-AMS-MML_HTMLorMML',
+                // other options...
+            },
+            // Configuration for plugins
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+        });
+    </script>
 </body>
 </html>
